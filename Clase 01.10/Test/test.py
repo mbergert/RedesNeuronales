@@ -40,7 +40,7 @@ class MyTestCase(unittest.TestCase):
         self.assertEqual(SUM.feed(0, 0), (0,0))
         self.assertEqual(SUM.feed(0, 1), (1,0))
         self.assertEqual(SUM.feed(1, 0), (1,0))
-        self.assertEqual(SUM.feed(1, 1),(0,1) )
+        self.assertEqual(SUM.feed(1, 1),(0,1))
 
 if __name__ == '__main__':
     unittest.main()
