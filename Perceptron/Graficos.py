@@ -96,7 +96,11 @@ class LearningCurve:
 
         plt.plot(trainings, final)
         plt.ylim((0,1))
+        plt.ylabel("Porcentaje de aciertos")
+        plt.xlabel("# Entrenamientos")
+        plt.title("Learning Curve")
         plt.show()
+
 
 if __name__ == "__main__":
     grafics = LearningCurve()
