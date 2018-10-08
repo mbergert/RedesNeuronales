@@ -51,37 +51,51 @@ class Grafics:
 
 
 class LearningCurve:
+    def __init__(self):
+        self.randominputsx = []
+        self.randominputsy = []
+        self.traininginputsx = []
+        self.traininginputsy = []
+        self.points = 10001
+
+        self.randomweights = [uniform(-2, 2), uniform(-2, 2)]
+        self.bias = random()
+        self.perceptron = Perceptron(self.randomweights, self.bias)
+        # Training points
+        for i in range(0, self.points):
+            x = uniform(0, 100)
+            y = uniform(0, 100)
+            self.traininginputsx.append(x)
+            self.traininginputsy.append(y)
+        # Testing points
+        for i in range(0, self.points):
+            self.randominputsx.append(uniform(0, 100))
+            self.randominputsy.append(uniform(0, 500))
 
     def learningcurve(self):
-
-        randomweights = [uniform(-2, 2), uniform(-2, 2)]
-        bias = random()
         final=[]
         # Trainings
-        trainings = list(range(0, 1100, 10))
+        trainings = list(range(0, 10100, 100))
+
         for i in range(0, len(trainings)):
-            perceptron = Perceptron(randomweights,bias)
             # entrenar al perceptron
             for j in range(0, trainings[i] + 1):
-                x = uniform(0, 100)
-                y = uniform(0, 100)
-                perceptron.training([x, y], upp([x, y]))
-            randominputsx=[]
-            randominputsy = []
+                self.perceptron.training([self.traininginputsx[j], self.traininginputsy[j]], upp([self.traininginputsx[j], self.traininginputsy[j]]))
             perceptronanswers = []
             expected=[]
             aciertos=0
             #Conseguir las respuestas del perceptron entrenado
-            for i in range(0, 200):
-                randominputsx.append(uniform(0, 100))
-                randominputsy.append(uniform(0, 500))
-                perceptronanswers.append(perceptron.feed([randominputsx[i], randominputsy[i]]))
+            for i in range(0, self.points):
+                perceptronanswers.append(self.perceptron.feed([self.randominputsx[i], self.randominputsy[i]]))
             #Conseguir las respuestas esperadas
-                expected.append(upp([randominputsx[i],randominputsy[i]]))
+                expected.append(upp([self.randominputsx[i],self.randominputsy[i]]))
                 if perceptronanswers[i]== expected[i]:
                     aciertos+=1
+            aciertos=aciertos/self.points
             final.append(aciertos)
+
         plt.plot(trainings, final)
+        plt.ylim((0,1))
         plt.show()
 
 if __name__ == "__main__":
