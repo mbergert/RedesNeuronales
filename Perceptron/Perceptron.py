@@ -1,7 +1,16 @@
+from random import random, uniform
+
+
 class Perceptron:
-    def __init__(self, pesos, b):
-        self.pesos = pesos
-        self.b = b
+    def __init__(self, *, pesos=None, b=None, num=None):
+        self.pesos = []
+        if num == None:
+            self.pesos = pesos
+            self.b = b
+        else:
+            for i in range(0, num ):
+                self.pesos.append(uniform(-2, 2))
+            self.b = random()
 
     def feed(self, inputs):
         assert len(self.pesos) == len(inputs)
@@ -16,23 +25,23 @@ class Perceptron:
         diff = output - realOutput
         lr = 0.1
         for i in range(0, len(inputs)):
-            self.pesos[i] += (lr *inputs[i] * diff)
-        self.b += (lr*diff)
+            self.pesos[i] += (lr * inputs[i] * diff)
+        self.b += (lr * diff)
 
 
 class And(Perceptron):
     def __init__(self):
-        super().__init__([1, 1], -1.5)
+        super().__init__(pesos=[1, 1], b=-1.5)
 
 
 class Or(Perceptron):
     def __init__(self):
-        super().__init__([1, 1], -0.5)
+        super().__init__(pesos=[1, 1], b=-0.5)
 
 
 class NanD(Perceptron):
     def __init__(self):
-        super().__init__([-2, -2], 3)
+        super().__init__(pesos=[-2, -2], b=3)
 
 
 class Sum:

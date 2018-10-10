@@ -1,19 +1,18 @@
 from random import random, uniform, randint
 import matplotlib.pyplot as plt
-
-from Perceptron import Perceptron
 from Sigmoid import Sigmoid
 
 
-class LearningCurve:
+class LearningCurve(Sigmoid):
     def __init__(self, inputs, outputs, epoch):
         self.inputs = inputs
         self.outputs = outputs
         self.epoch = epoch
-        # Create the perceptron
+        # Create the Sigmoid
         self.randomweights = [uniform(-2, 2), uniform(-2, 2)]
+
         self.bias = random()
-        self.perceptron = Perceptron(pesos=self.randomweights, b=self.bias)
+        self.sigmoid = Sigmoid(pesos=self.randomweights, b=self.bias)
 
 
     def learningCurve(self):
@@ -22,9 +21,9 @@ class LearningCurve:
         for i in range(0, self.epoch):
             # Training the perceptron
 
-            for h in range(0, len(self.inputs)):
+            for h in range(0, len(inputs)):
                 x = randint(0, len(self.inputs) - 1)
-                self.perceptron.training(self.inputs[x], self.outputs[x])
+                self.sigmoid.training(self.inputs[x], self.outputs[x])
             perceptronanswers = []
 
             aciertos = 0
@@ -36,17 +35,21 @@ class LearningCurve:
                 testingset.append(self.inputs[random])
                 testingoutputs.append(self.outputs[random])
             for i in range(0, len(testingset)):
-                perceptronanswers.append(self.perceptron.feed(testingset[i]))
+                perceptronanswers.append(self.sigmoid.feed(testingset[i]))
+                if perceptronanswers[i]>0.5:
+                    perceptronanswers[i]=1
+                else:
+                    perceptronanswers[i]=0
                 if perceptronanswers[i] == testingoutputs[i]:
                     aciertos += 1
             aciertos = aciertos / len(testingset)
-            final.append(aciertos)
 
+            final.append(aciertos)
         plt.plot(range(0, self.epoch), final)
         plt.ylim((0, 1))
         plt.ylabel("Porcentaje de aciertos")
         plt.xlabel("# Entrenamientos")
-        plt.title("Learning Curve")
+        plt.title("Sigmoid Learning Curve")
         plt.show()
 
 
