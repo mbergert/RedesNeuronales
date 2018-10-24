@@ -39,8 +39,17 @@ class Neuron():
 
     def getOutput(self):
         return self.output
-    def updateDelta(self):
-        return self.delta
+    def updateDelta(self, error):
+        self.delta= error*self.transferDerivate(self.output)
+
+    '''def updateWeight(self, learningRate):
+        weightN = weightN + (learningRate * delta * inputN)'''
+
+    def transferDerivate(self, output):
+        return output*(1-self.output)
+
+
+# bias = bias + (learningRate * delta)
 
 
 
