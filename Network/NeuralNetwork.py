@@ -1,11 +1,17 @@
-
+from Network.NeuronLayer import NeuronLayer
 
 
 class NeuralNetwork:
-    def __init__(self, layers):
-        self.layers=layers
-        self.learningrate=0.5
+    def __init__(self, nInputs, neurperLayers):
+        self.layers=[]
+
+        self.lr=0.5
         self.output=0
+        Inputs=nInputs
+        for i in range(len(neurperLayers)):
+            layer= NeuronLayer(nInputs, neurperLayers[i])
+            self.layers.append(layer)
+            Inputs= neurperLayers[i]
 
 
     def feed(self, inputs):
@@ -29,21 +35,11 @@ class NeuralNetwork:
 
         for i in range(nlayer-1,flayer-1, -1):
             self.layers[i].setUpLayer(self.layers[i+1])
-            ''''
-            #|for j in range(0,len(self.layers[i].neurons)):
-                #Conseguir el peso #numero de la neurona# de cada neurona de la layer i+1
-                weights= self.layers[i+1].getWeightsi(j)
-                #Conseguir todos los deltas de las neuronas de la layer n+1
-                deltas= self.layers[i+1].getDeltas()
-                #error= la suma de la multiplicación de los puntos anteriores
-                error=0
-                for i in range(0,len(deltas)):
-                    error+= weights[i]*deltas[i]
-                self.layers[i].backpropagation(error)'''
         #PASO 3
         #"weightN = weightN + (learningRate * delta * inputN)
         #bias = bias + (learningRate * delta)
         for i in range(0, len(self.layers)):
-            self.layers[i].updateWeights()
+            self.layers[i].update(self.lr)
+
     #def backPropagation(self,expectedOutput):
 

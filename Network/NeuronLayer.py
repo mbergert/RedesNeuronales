@@ -1,21 +1,22 @@
+from Network.Neuron import Neuron
+
+
 class NeuronLayer:
-    def __init__(self, neurons):
-        self.neurons = neurons
+    def __init__(self, nInputs, nNeurons):
+        self.neurons = []
         self.layeroutput = []
-        self.deltas = []
+
+        for i in range(nNeurons):
+            neur=Neuron(nInputs)
+            self.neurons.append(neur)
 
     def feed(self, inputs):
-
+        self.layeroutput=[]
         for neuron in self.neurons:
             output = neuron.feed(inputs)
             self.layeroutput.append(output)
         return self.layeroutput
 
-    def getDeltas(self):
-        for neuron in self.neurons:
-            self.deltas.append(neuron.getDelta())
-
-        return self.deltas
 
     def getWeightsi(self, i):
         weightsi = []
@@ -42,3 +43,7 @@ class NeuronLayer:
 
     def getNeurons(self):
         return self.neurons
+
+    def update(self,lr):
+        for neuron in self.neurons:
+            neuron.update(lr)
