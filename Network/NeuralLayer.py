@@ -1,22 +1,23 @@
 from Network.Neuron import Neuron
 
 
-class NeuronLayer:
+class NeuralLayer:
     def __init__(self, nInputs, nNeurons):
         self.neurons = []
         self.layeroutput = []
 
         for i in range(nNeurons):
-            neur=Neuron(nInputs)
+            neur = Neuron(num=nInputs)
             self.neurons.append(neur)
 
     def feed(self, inputs):
-        self.layeroutput=[]
+        out = []
         for neuron in self.neurons:
             output = neuron.feed(inputs)
-            self.layeroutput.append(output)
-        return self.layeroutput
+            out.append(output)
+        self.layeroutput=out
 
+        return self.layeroutput
 
     def getWeightsi(self, i):
         weightsi = []
@@ -25,25 +26,23 @@ class NeuronLayer:
             weightsi.append(w)
         return weightsi
 
-    def backpropagation(self, error):
-        for neuron in self.neurons:
-            neuron.updateDelta(error)
+    def setUpLastLayer(self, output):
+        for i in range(len(self.neurons)):
+            self.neurons[i].updatelastlayererror(output[i])
+            self.neurons[i].updatelastlayerDelta(self.layeroutput[i])
 
-    '''def updateWeights(self, learningRate):
-        for neuron in self.neurons:
-            neuron.updateWeight(learningRate.)
-        '''
+
     def setUpLayer(self, nextlayer):
-        error=0
+        error = 0
         for i in range(len(self.neurons)):
             for j in range(len(nextlayer.getNeurons())):
-                error+= nextlayer.getNeurons()[j].getweighti(i)*nextlayer.getNeurons()[j].getDelta()
+                error += nextlayer.getNeurons()[j].getWeighti(i) * nextlayer.getNeurons()[j].getDelta()
             self.neurons[i].updateDelta(error)
-            error=0
+            error = 0
 
     def getNeurons(self):
         return self.neurons
 
-    def update(self,lr):
+    def update(self, lr):
         for neuron in self.neurons:
             neuron.update(lr)
