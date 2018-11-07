@@ -44,3 +44,6 @@ class NeuralNetwork:
         return self.output
 
 
+red= NeuralNetwork(1,(1,1))
+
+

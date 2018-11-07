@@ -22,11 +22,11 @@ class Neuron:
 
         assert len(self.weights) == len(inputs)
         self.lastinputs = inputs
-        equation = 0
+        equation = 0.0
         for i in range(0, len(inputs)):
             equation += inputs[i] * self.weights[i]
         equation += self.bias
-        sigma = 1 / (1 + np.exp(-equation))
+        sigma = 1.0 / (1.0 + np.exp(-equation))
         self.updateOutput(sigma)
         return sigma
 

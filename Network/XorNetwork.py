@@ -22,7 +22,7 @@ class XorNetwork:
             self.Outputs.append([xor(I3[0], I3[1])])
             self.Outputs.append([xor(I4[0], I4[1])])
         self.Network.realTraining(self.Inputs, self.Outputs)
-        self.Network.feed([0, 1])
+        self.Network.feed([0, 0])
         print(self.Network.getOutput())
 
 

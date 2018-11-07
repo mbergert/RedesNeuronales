@@ -2,6 +2,8 @@ from sklearn.model_selection import *
 from sklearn.preprocessing import minmax_scale
 import numpy
 import matplotlib.pyplot as plt
+from sklearn.utils import shuffle
+
 from NeuralNetwork import NeuralNetwork
 
 
@@ -11,66 +13,75 @@ class Iris:
         print("comienza carga de datos")
         dt = numpy.loadtxt(dtname, delimiter=",")  # Cargamos el dataset csv
         print("Comienza edición de datos")
+        dt= shuffle(dt)
         sh = dt.shape
         largo = sh[0]
         ancho = sh[1]
-        X = dt[:, 0:ancho - 1]
+        X = dt[:, 0:4]
         X_norm = minmax_scale(X)
-        output = dt[:, ancho - 1]
+
+        print(X_norm)
+        output = dt[:, 4:]
+        print(output)
         X_train, X_test, output_train, output_test = train_test_split(X_norm, output, test_size=0.33,
                                                                       random_state=27)  # Separamos los datos en train/test
-        print("Fin ajuste de datos")
-        print("Creacion de red neuronal")
 
-        red = NeuralNetwork(4, (4, 5, 3))
+        "Cambiar los testing outputs"
+        print("Fin ajuste de datos")
+
+        print("Creacion de red neuronal")
+        # Creacion de la red
+        red = NeuralNetwork(4, (4, 5, 4, 3))
         final = []
         trainingInputs = []
         trainingOutputs = []
-        print(ntrainings)
 
+        # Cargar un gran set de inputs para entrenar
         for i in range(0, ntrainings):
             trainingInputs.append(X_train)
             trainingOutputs.append(output_train)
-        # red.realTraining(X_train, output_train)
 
         trainings = list(range(0, ntrainings, 100))
-        print(trainings)
+        trainingInputs, trainingOutputs = shuffle(trainingInputs, trainingOutputs)
+        # inicio de los loops
         for i in range(0, len(trainings)):
-            # entrenar al perceptron
+            # entrenar a la red
+            print("entrenando la red para", format(trainings[i]))
+            # entrenar
             for j in range(0, trainings[i]):
                 red.realTraining(trainingInputs[j], trainingOutputs[j])
             redanswers = []
             expected = []
             aciertos = 0
             # Conseguir las respuestas del perceptron entrenado
+            print("feed")
             for k in range(0, len(X_test)):
-                an=red.feed(X_test[k])
-                normalized_an=[0,0,0]
-                for n in range (len(an)):
+                an = red.feed(X_test[k])
+                normalized_an = [0, 0, 0]
+                for n in range(len(an)):
+                    print("An", format(an[n]))
                     if an[n] < 0.5:
-                        normalized_an= 0
+                        normalized_an[n] = 0
                     else:
-                        normalized_an= 1
-
+                        normalized_an[n] = 1
+                print("normalized an", format(normalized_an))
+                print("output_test", format(output_test[k]))
                 redanswers.append(normalized_an)
-                print("redanwers")
-                print(redanswers)
-                print(red.feed(X_test[k]))
-                # Conseguir las respuestas esperadas
                 expected.append(output_test[k])
-                a=0
-                for n in range (len(redanswers[n])):
+                a = 0
+                for n in range(len(redanswers[k])):
                     if redanswers[k][n] == expected[k][n]:
-                        a=1
-                    else: a=0
-                if a:
-                    aciertos += 1
-            aciertos = aciertos / len(X_test)
+                        a =  a+1
+
+
+                aciertos = aciertos + a/3
+            aciertos = float(aciertos )/ len(X_test)
+
             final.append(aciertos)
 
         print("fin del loop")
         plt.plot(trainings, final)
-        plt.ylim((0, 2))
+        plt.ylim((0, 1))
         plt.ylabel("Porcentaje de aciertos")
         plt.xlabel("# Entrenamientos")
         plt.title("Learning Curve")
@@ -79,6 +90,6 @@ class Iris:
 
 if __name__ == "__main__":
     iris = Iris()
-    iris.irisTraining("iris.data.csv", 1100)
+    iris.irisTraining("iris.data.csv", 500)
     # grafics = Grafics()
     # grafics.plotear()
