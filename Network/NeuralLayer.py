@@ -27,9 +27,9 @@ class NeuralLayer:
         return weightsi
 
     def setUpLastLayer(self, output):
-        for i in range(0,len(self.neurons)):
-            self.neurons[i].updatelastlayererror(self.neurons[i].output)
-            self.neurons[i].updatelastlayerDelta(self.layeroutput[i])
+        for i in range(0, len(self.neurons)):
+            self.neurons[i].updatelastlayererror(output[i])
+            self.neurons[i].updatelastlayerDelta(self.neurons[i].output)
 
 
     def setUpLayer(self, nextlayer):

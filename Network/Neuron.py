@@ -13,7 +13,7 @@ class Neuron:
             for i in range(0, num):
                 self.weights.append(uniform(-2, 2))
             self.bias = random()
-        self.delta = 0
+        self.delta = 1
         self.output = 0
         self.lastinputs = []
         self.error = 0
@@ -54,7 +54,10 @@ class Neuron:
 
     def update(self, lr):
         for i in range(len(self.weights)):
+
+
             self.weights[i] += lr * self.getDelta() * self.lastinputs[i]
+
         self.bias += lr * self.getDelta()
 
     def updatelastlayererror(self, desiredOutput):

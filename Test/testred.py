@@ -14,8 +14,8 @@ class MyTestCase(unittest.TestCase):
         self.neuron2.weights= [0.3]
         self.neuron1.bias= 0.5
         self.neuron2.bias= 0.4
-        self.neuron1.lr= 0.5
-        self.neuron2.lr= 0.5
+        self.neuron1.lr= 0.1
+        self.neuron2.lr= 0.1
 
 
 
