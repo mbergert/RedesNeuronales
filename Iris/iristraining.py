@@ -13,16 +13,14 @@ class Iris:
         print("comienza carga de datos")
         dt = numpy.loadtxt(dtname, delimiter=",")  # Cargamos el dataset csv
         print("Comienza edición de datos")
-        dt= shuffle(dt)
+        dt = shuffle(dt)
         sh = dt.shape
-        largo = sh[0]
-        ancho = sh[1]
+
         X = dt[:, 0:4]
         X_norm = minmax_scale(X)
 
-        print(X_norm)
         output = dt[:, 4:]
-        print(output)
+
         X_train, X_test, output_train, output_test = train_test_split(X_norm, output, test_size=0.33,
                                                                       random_state=27)  # Separamos los datos en train/test
 
@@ -32,7 +30,8 @@ class Iris:
         print("Creacion de red neuronal")
         # Creacion de la red
         red = NeuralNetwork(4, (4, 5, 4, 3))
-        final = []
+        finalaciertos = []
+        finalerrores = []
         trainingInputs = []
         trainingOutputs = []
 
@@ -51,45 +50,56 @@ class Iris:
             for j in range(0, trainings[i]):
                 red.realTraining(trainingInputs[j], trainingOutputs[j])
             redanswers = []
+            unnormalized_answers = []
             expected = []
             aciertos = 0
+            errores = 0
             # Conseguir las respuestas del perceptron entrenado
             print("feed")
             for k in range(0, len(X_test)):
                 an = red.feed(X_test[k])
                 normalized_an = [0, 0, 0]
                 for n in range(len(an)):
-                    print("An", format(an[n]))
+
                     if an[n] < 0.5:
                         normalized_an[n] = 0
                     else:
                         normalized_an[n] = 1
-                print("normalized an", format(normalized_an))
-                print("output_test", format(output_test[k]))
+
+                unnormalized_answers.append(an)
                 redanswers.append(normalized_an)
                 expected.append(output_test[k])
                 a = 0
+                e = 0
                 for n in range(len(redanswers[k])):
                     if redanswers[k][n] == expected[k][n]:
-                        a =  a+1
+                        a = a + 1
+                    e = e + (expected[k][n] - unnormalized_answers[k][n]) ** 2
 
+                aciertos = aciertos + a / 3
+                errores = e
+            aciertos = float(aciertos) / len(X_test)
 
-                aciertos = aciertos + a/3
-            aciertos = float(aciertos )/ len(X_test)
-
-            final.append(aciertos)
+            finalaciertos.append(aciertos)
+            finalerrores.append(errores)
 
         print("fin del loop")
-        plt.plot(trainings, final)
+        plt.plot(trainings, finalaciertos)
         plt.ylim((0, 1))
         plt.ylabel("Porcentaje de aciertos")
         plt.xlabel("# Entrenamientos")
         plt.title("Learning Curve")
         plt.show()
 
+        plt.plot(trainings, finalerrores, 'r-')
+
+        plt.ylabel("Errores")
+        plt.xlabel("# Entrenamientos")
+        plt.title("Curva de errores")
+        plt.show()
+
 
 if __name__ == "__main__":
     iris = Iris()
     iris.irisTraining("iris.data.csv", 500)
-    # grafics = Grafics()
-    # grafics.plotear()
+
