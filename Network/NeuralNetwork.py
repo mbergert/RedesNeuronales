@@ -2,9 +2,9 @@ from Network.NeuralLayer import NeuralLayer
 
 
 class NeuralNetwork:
-    def __init__(self, nInputs, neurperLayers):
+    def __init__(self, nInputs, neurperLayers, lr):
         self.layers = []
-        self.lr = 0.5
+        self.lr = lr
         self.output = 0
         Inputs = nInputs
         for i in range(len(neurperLayers)):
@@ -43,7 +43,5 @@ class NeuralNetwork:
     def getOutput(self):
         return self.output
 
-
-red= NeuralNetwork(1,(1,1))
 
 

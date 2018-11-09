@@ -2,10 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="75b0f850-2bf3-47b4-8fb7-a9de958b08bb" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/RedesNeuronales.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/RedesNeuronales.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Iris/iristraining.py" beforeDir="false" afterPath="$PROJECT_DIR$/Iris/iristraining.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Network/NeuralLayer.py" beforeDir="false" afterPath="$PROJECT_DIR$/Network/NeuralLayer.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Network/NeuralNetwork.py" beforeDir="false" afterPath="$PROJECT_DIR$/Network/NeuralNetwork.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Network/Neuron.py" beforeDir="false" afterPath="$PROJECT_DIR$/Network/Neuron.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Test/testred.py" beforeDir="false" afterPath="$PROJECT_DIR$/Test/testred.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -16,12 +18,14 @@
   <component name="CoverageDataManager">
     <SUITE FILE_PATH="coverage/RedesNeuronales$NeuralLayer.coverage" NAME="NeuralLayer Coverage Results" MODIFIED="1540475840495" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Network" />
     <SUITE FILE_PATH="coverage/RedesNeuronales$XorNetwork.coverage" NAME="XorNetwork Coverage Results" MODIFIED="1541622403156" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Network" />
-    <SUITE FILE_PATH="coverage/RedesNeuronales$Unittests_for_testred_MyTestCase_testCase1.coverage" NAME="Unittests for testred.MyTestCase.testCase1 Coverage Results" MODIFIED="1541624112139" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Test" />
+    <SUITE FILE_PATH="coverage/RedesNeuronales$Unittests_for_testred_MyTestCase_testCase1.coverage" NAME="Unittests for testred.MyTestCase.testCase1 Coverage Results" MODIFIED="1541692459678" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Test" />
     <SUITE FILE_PATH="coverage/RedesNeuronales$Neuron.coverage" NAME="Neuron Coverage Results" MODIFIED="1540478528056" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Network" />
     <SUITE FILE_PATH="coverage/RedesNeuronales$cloudpickle.coverage" NAME="cloudpickle Coverage Results" MODIFIED="1541532929087" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/../untitled/venv/lib/python3.6/site-packages/sklearn/externals/joblib/externals/cloudpickle" />
-    <SUITE FILE_PATH="coverage/RedesNeuronales$Unittests_for_testred_MyTestCase.coverage" NAME="Unittests for testred.MyTestCase Coverage Results" MODIFIED="1541626985637" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Test" />
-    <SUITE FILE_PATH="coverage/RedesNeuronales$iristraining.coverage" NAME="iristraining Coverage Results" MODIFIED="1541635900616" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Iris" />
+    <SUITE FILE_PATH="coverage/RedesNeuronales$Unittests_for_testred_MyTestCase.coverage" NAME="Unittests for testred.MyTestCase Coverage Results" MODIFIED="1541692464539" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Test" />
+    <SUITE FILE_PATH="coverage/RedesNeuronales$iristraining.coverage" NAME="iristraining Coverage Results" MODIFIED="1541735155691" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Iris" />
     <SUITE FILE_PATH="coverage/RedesNeuronales$Graficos.coverage" NAME="Graficos Coverage Results" MODIFIED="1541451435413" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Perceptron" />
+    <SUITE FILE_PATH="coverage/RedesNeuronales$Unittests_for_testred_MyTestCase_testCase2.coverage" NAME="Unittests for testred.MyTestCase.testCase2 Coverage Results" MODIFIED="1541693322974" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Test" />
+    <SUITE FILE_PATH="coverage/RedesNeuronales$Unittests_for_testred_MyTestCase_testgoodSetUp.coverage" NAME="Unittests for testred.MyTestCase.testgoodSetUp Coverage Results" MODIFIED="1541692608760" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Test" />
     <SUITE FILE_PATH="coverage/RedesNeuronales$NeuralNetwork.coverage" NAME="NeuralNetwork Coverage Results" MODIFIED="1540476632436" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Network" />
   </component>
   <component name="DatabaseView">
@@ -42,9 +46,10 @@
     <session id="-1370572247">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="9" />
+          <entry key="project.closed" value="10" />
           <entry key="project.open.time.0" value="2" />
           <entry key="project.open.time.2" value="1" />
+          <entry key="project.open.time.28" value="1" />
           <entry key="project.open.time.3" value="1" />
           <entry key="project.open.time.35" value="1" />
           <entry key="project.open.time.39" value="1" />
@@ -53,20 +58,20 @@
           <entry key="project.open.time.5" value="1" />
           <entry key="project.open.time.6" value="1" />
           <entry key="project.open.time.9" value="1" />
-          <entry key="project.opened" value="11" />
+          <entry key="project.opened" value="12" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="csv" value="3" />
-          <entry key="py" value="33" />
+          <entry key="py" value="35" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="CSV" value="2" />
           <entry key="PLAIN_TEXT" value="1" />
-          <entry key="Python" value="33" />
+          <entry key="Python" value="35" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
@@ -74,77 +79,53 @@
           <entry key="Python Console" value="60" />
           <entry key="csv" value="12" />
           <entry key="dummy" value="4" />
-          <entry key="py" value="5114" />
-          <entry key="txt" value="125" />
+          <entry key="py" value="6268" />
+          <entry key="txt" value="154" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="PLAIN_TEXT" value="141" />
-          <entry key="Python" value="5174" />
+          <entry key="PLAIN_TEXT" value="170" />
+          <entry key="Python" value="6328" />
         </counts>
       </usages-collector>
     </session>
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/Iris/iristraining.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="961">
-              <caret line="104" selection-start-line="104" selection-end-line="104" />
-              <folding>
-                <element signature="e#0#37#0" expanded="true" />
-                <marker date="1541635854331" expanded="true" signature="218:223" ph="..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Network/Neuron.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-85">
-              <caret line="16" selection-start-line="16" selection-end-line="16" />
+            <state relative-caret-position="-381">
+              <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
               <folding>
                 <element signature="e#0#34#0" expanded="true" />
-                <marker date="1541627089103" expanded="true" signature="1213:1278" ph="..." />
+                <marker date="1541685281809" expanded="true" signature="1213:1278" ph="..." />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Iris/iristraining.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="187">
+              <caret line="32" column="43" selection-start-line="32" selection-start-column="43" selection-end-line="32" selection-end-column="43" />
+              <folding>
+                <element signature="e#0#11#0" expanded="true" />
+                <marker date="1541731250372" expanded="true" signature="231:236" ph="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Network/NeuralNetwork.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="493">
-              <caret line="29" column="38" selection-start-line="29" selection-start-column="28" selection-end-line="29" selection-end-column="42" />
+            <state relative-caret-position="-268">
+              <caret line="17" column="41" lean-forward="true" selection-start-line="17" selection-start-column="41" selection-end-line="17" selection-end-column="41" />
               <folding>
-                <marker date="1541622895380" expanded="true" signature="1181:1292" ph="..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Test/test.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <folding>
-                <element signature="e#0#15#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Test/testred.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="272">
-              <caret line="16" column="28" selection-start-line="16" selection-start-column="28" selection-end-line="16" selection-end-column="28" />
-              <folding>
-                <element signature="e#0#15#0" expanded="true" />
-                <marker date="1541625710413" expanded="true" signature="116:532" ph="..." />
+                <marker date="1541709394761" expanded="true" signature="1184:1295" ph="..." />
               </folding>
             </state>
           </provider>
@@ -153,24 +134,10 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Network/NeuralLayer.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="442">
-              <caret line="26" column="23" selection-start-line="26" selection-start-column="23" selection-end-line="26" selection-end-column="23" />
+            <state relative-caret-position="367">
+              <caret line="39" column="25" selection-start-line="39" selection-start-column="25" selection-end-line="39" selection-end-column="25" />
               <folding>
-                <marker date="1541626985577" expanded="true" signature="919:928" ph="..." />
-                <marker date="1541626985577" expanded="true" signature="1237:1246" ph="..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Network/XorNetwork.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="408">
-              <caret line="24" column="32" selection-start-line="24" selection-start-column="32" selection-end-line="24" selection-end-column="32" />
-              <folding>
-                <element signature="e#0#35#0" expanded="true" />
-                <marker date="1541618904164" expanded="true" signature="172:177" ph="..." />
+                <marker date="1541731026898" expanded="true" signature="919:928" ph="..." />
               </folding>
             </state>
           </provider>
@@ -206,10 +173,10 @@
         <option value="$PROJECT_DIR$/Iris/iris.data.csv" />
         <option value="$PROJECT_DIR$/Sigmoid/LearningCurve.py" />
         <option value="$PROJECT_DIR$/Network/XorNetwork.py" />
-        <option value="$PROJECT_DIR$/Network/NeuralNetwork.py" />
-        <option value="$PROJECT_DIR$/Test/testred.py" />
-        <option value="$PROJECT_DIR$/Network/NeuralLayer.py" />
         <option value="$PROJECT_DIR$/Network/Neuron.py" />
+        <option value="$PROJECT_DIR$/Test/testred.py" />
+        <option value="$PROJECT_DIR$/Network/NeuralNetwork.py" />
+        <option value="$PROJECT_DIR$/Network/NeuralLayer.py" />
         <option value="$PROJECT_DIR$/Iris/iristraining.py" />
       </list>
     </option>
@@ -221,20 +188,39 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="258" />
-    <option name="y" value="99" />
-    <option name="width" value="1161" />
-    <option name="height" value="641" />
+    <option name="x" value="67" />
+    <option name="y" value="25" />
+    <option name="width" value="1299" />
+    <option name="height" value="743" />
   </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
-    <panes />
+    <panes>
+      <pane id="Scope" />
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="RedesNeuronales" type="b2602c69:ProjectViewProjectNode" />
+              <item name="RedesNeuronales" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="RedesNeuronales" type="b2602c69:ProjectViewProjectNode" />
+              <item name="RedesNeuronales" type="462c0819:PsiDirectoryNode" />
+              <item name="Test" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+    </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -299,28 +285,6 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="cloudpickle" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="RedesNeuronales" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/../untitled/venv/lib/python3.6/site-packages/sklearn/externals/joblib/externals/cloudpickle" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/../untitled/venv/lib/python3.6/site-packages/sklearn/externals/joblib/externals/cloudpickle/cloudpickle.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
     <configuration name="iristraining" type="PythonConfigurationType" factoryName="Python">
       <module name="RedesNeuronales" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -373,20 +337,52 @@
       <option name="_new_targetType" value="&quot;PYTHON&quot;" />
       <method v="2" />
     </configuration>
+    <configuration name="Unittests for testred.MyTestCase.testCase2" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
+      <module name="RedesNeuronales" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Test" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;testred.MyTestCase.testCase2&quot;" />
+      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Unittests for testred.MyTestCase.testgoodSetUp" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
+      <module name="RedesNeuronales" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Test" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;testred.MyTestCase.testgoodSetUp&quot;" />
+      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
+      <method v="2" />
+    </configuration>
     <list>
       <item itemvalue="Python.Unnamed" />
       <item itemvalue="Python.iristraining" />
       <item itemvalue="Python.XorNetwork" />
-      <item itemvalue="Python.cloudpickle" />
       <item itemvalue="Python tests.Unittests for testred.MyTestCase" />
       <item itemvalue="Python tests.Unittests for testred.MyTestCase.testCase1" />
+      <item itemvalue="Python tests.Unittests for testred.MyTestCase.testCase2" />
+      <item itemvalue="Python tests.Unittests for testred.MyTestCase.testgoodSetUp" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Python tests.Unittests for testred.MyTestCase.testCase2" />
+        <item itemvalue="Python tests.Unittests for testred.MyTestCase.testgoodSetUp" />
         <item itemvalue="Python tests.Unittests for testred.MyTestCase" />
         <item itemvalue="Python tests.Unittests for testred.MyTestCase.testCase1" />
         <item itemvalue="Python.XorNetwork" />
-        <item itemvalue="Python.cloudpickle" />
       </list>
     </recent_temporary>
   </component>
@@ -422,39 +418,46 @@
       <option name="project" value="LOCAL" />
       <updated>1541627479361</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="&quot;mission completed&quot;">
+      <created>1541636058367</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1541636058367</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="Unittests_for_testred_MyTestCase - 2018.11.07 at 18h 11m 46s.xml">
+    <history-entry file="Unittests_for_testred_MyTestCase_testCase2 - 2018.11.08 at 12h 38m 22s.xml">
+      <configuration name="Unittests for testred.MyTestCase.testCase2" configurationId="tests" />
+    </history-entry>
+    <history-entry file="Unittests_for_testred_MyTestCase_testCase2 - 2018.11.08 at 12h 54m 13s.xml">
+      <configuration name="Unittests for testred.MyTestCase.testCase2" configurationId="tests" />
+    </history-entry>
+    <history-entry file="Unittests_for_testred_MyTestCase_testCase1 - 2018.11.08 at 12h 54m 19s.xml">
+      <configuration name="Unittests for testred.MyTestCase.testCase1" configurationId="tests" />
+    </history-entry>
+    <history-entry file="Unittests_for_testred_MyTestCase - 2018.11.08 at 12h 54m 24s.xml">
       <configuration name="Unittests for testred.MyTestCase" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittests_for_testred_MyTestCase - 2018.11.07 at 18h 12m 13s.xml">
-      <configuration name="Unittests for testred.MyTestCase" configurationId="tests" />
+    <history-entry file="Unittests_for_testred_MyTestCase_testgoodSetUp - 2018.11.08 at 12h 55m 22s.xml">
+      <configuration name="Unittests for testred.MyTestCase.testgoodSetUp" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittests_for_testred_MyTestCase - 2018.11.07 at 18h 21m 50s.xml">
-      <configuration name="Unittests for testred.MyTestCase" configurationId="tests" />
+    <history-entry file="Unittests_for_testred_MyTestCase_testgoodSetUp - 2018.11.08 at 12h 55m 44s.xml">
+      <configuration name="Unittests for testred.MyTestCase.testgoodSetUp" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittests_for_testred_MyTestCase - 2018.11.07 at 18h 28m 55s.xml">
-      <configuration name="Unittests for testred.MyTestCase" configurationId="tests" />
+    <history-entry file="Unittests_for_testred_MyTestCase_testgoodSetUp - 2018.11.08 at 12h 56m 04s.xml">
+      <configuration name="Unittests for testred.MyTestCase.testgoodSetUp" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittests_for_testred_MyTestCase - 2018.11.07 at 18h 29m 20s.xml">
-      <configuration name="Unittests for testred.MyTestCase" configurationId="tests" />
+    <history-entry file="Unittests_for_testred_MyTestCase_testgoodSetUp - 2018.11.08 at 12h 56m 49s.xml">
+      <configuration name="Unittests for testred.MyTestCase.testgoodSetUp" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittests_for_testred_MyTestCase - 2018.11.07 at 18h 29m 37s.xml">
-      <configuration name="Unittests for testred.MyTestCase" configurationId="tests" />
+    <history-entry file="Unittests_for_testred_MyTestCase_testCase2 - 2018.11.08 at 12h 56m 56s.xml">
+      <configuration name="Unittests for testred.MyTestCase.testCase2" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittests_for_testred_MyTestCase - 2018.11.07 at 18h 29m 54s.xml">
-      <configuration name="Unittests for testred.MyTestCase" configurationId="tests" />
-    </history-entry>
-    <history-entry file="Unittests_for_testred_MyTestCase - 2018.11.07 at 18h 30m 09s.xml">
-      <configuration name="Unittests for testred.MyTestCase" configurationId="tests" />
-    </history-entry>
-    <history-entry file="Unittests_for_testred_MyTestCase - 2018.11.07 at 18h 30m 26s.xml">
-      <configuration name="Unittests for testred.MyTestCase" configurationId="tests" />
-    </history-entry>
-    <history-entry file="Unittests_for_testred_MyTestCase - 2018.11.07 at 18h 43m 05s.xml">
-      <configuration name="Unittests for testred.MyTestCase" configurationId="tests" />
+    <history-entry file="Unittests_for_testred_MyTestCase_testCase2 - 2018.11.08 at 13h 08m 43s.xml">
+      <configuration name="Unittests for testred.MyTestCase.testCase2" configurationId="tests" />
     </history-entry>
   </component>
   <component name="TodoView">
@@ -467,16 +470,15 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="67" y="25" width="1299" height="743" extended-state="7" />
-    <editor active="true" />
+    <frame x="67" y="25" width="1299" height="743" extended-state="6" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" weight="0.27134877" />
+      <window_info content_ui="combo" id="Project" order="0" weight="0.15562649" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32789558" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.48450243" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.3980424" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.34369886" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.3970588" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32952693" />
@@ -489,17 +491,17 @@
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="right" id="SciView" order="3" weight="0.3790902" />
-      <window_info anchor="right" id="Database" order="4" weight="0.32960895" />
+      <window_info active="true" anchor="right" id="SciView" order="3" visible="true" weight="0.2529928" />
+      <window_info anchor="right" id="Database" order="4" weight="0.4924182" />
     </layout>
     <layout-to-restore>
-      <window_info content_ui="combo" id="Project" order="0" weight="0.27134877" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.15562649" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32789558" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.48450243" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.3980424" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.3442088" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.3970588" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32952693" />
@@ -512,8 +514,8 @@
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="right" id="SciView" order="3" weight="0.3790902" />
-      <window_info anchor="right" id="Database" order="4" weight="0.32960895" />
+      <window_info active="true" anchor="right" id="SciView" order="3" visible="true" weight="0.2529928" />
+      <window_info anchor="right" id="Database" order="4" weight="0.4924182" />
     </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -526,18 +528,10 @@
     <MESSAGE value="&quot;not working plotting trained red by iris&quot;" />
     <MESSAGE value="&quot;La red no esta tirando decimales y me da pena&quot;" />
     <MESSAGE value="&quot;Learning curve, falta errores" />
-    <option name="LAST_COMMIT_MESSAGE" value="&quot;Learning curve, falta errores" />
+    <MESSAGE value="&quot;mission completed&quot;" />
+    <option name="LAST_COMMIT_MESSAGE" value="&quot;mission completed&quot;" />
   </component>
   <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/Network/NeuralLayer.py</url>
-          <line>30</line>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
     <watches-manager>
       <configuration name="PythonConfigurationType">
         <watch expression="recursive" />
@@ -582,14 +576,14 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Iris/iris.data.csv">
-      <provider selected="true" editor-type-id="csv-text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="21" lean-forward="true" selection-start-line="4" selection-start-column="21" selection-end-line="4" selection-end-column="21" />
-        </state>
-      </provider>
       <provider editor-type-id="text-editor">
         <state relative-caret-position="236">
           <caret line="150" selection-start-line="150" selection-end-line="150" />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="csv-text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="21" lean-forward="true" selection-start-line="4" selection-start-column="21" selection-end-line="4" selection-end-column="21" />
         </state>
       </provider>
     </entry>
@@ -610,76 +604,72 @@
     <entry file="file://$PROJECT_DIR$/Iris/iris.py">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/Network/NeuralNetwork.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="493">
-          <caret line="29" column="38" selection-start-line="29" selection-start-column="28" selection-end-line="29" selection-end-column="42" />
-          <folding>
-            <marker date="1541622895380" expanded="true" signature="1181:1292" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Test/test.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <folding>
-            <element signature="e#0#15#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Test/testred.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="16" column="28" selection-start-line="16" selection-start-column="28" selection-end-line="16" selection-end-column="28" />
-          <folding>
-            <element signature="e#0#15#0" expanded="true" />
-            <marker date="1541625710413" expanded="true" signature="116:532" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Network/NeuralLayer.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="442">
-          <caret line="26" column="23" selection-start-line="26" selection-start-column="23" selection-end-line="26" selection-end-column="23" />
-          <folding>
-            <marker date="1541626985577" expanded="true" signature="919:928" ph="..." />
-            <marker date="1541626985577" expanded="true" signature="1237:1246" ph="..." />
-          </folding>
-        </state>
-      </provider>
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/Network/XorNetwork.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="408">
           <caret line="24" column="32" selection-start-line="24" selection-start-column="32" selection-end-line="24" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///usr/lib/python3.6/unittest/case.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="159">
+          <caret line="818" selection-start-line="818" selection-end-line="818" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Test/testred.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="14" column="41" selection-start-line="14" selection-start-column="40" selection-end-line="14" selection-end-column="41" />
           <folding>
-            <element signature="e#0#35#0" expanded="true" />
-            <marker date="1541618904164" expanded="true" signature="172:177" ph="..." />
+            <element signature="e#0#15#0" expanded="true" />
+            <marker date="1541692615690" expanded="true" signature="137:1331" ph="..." />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Network/Neuron.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-85">
-          <caret line="16" selection-start-line="16" selection-end-line="16" />
+        <state relative-caret-position="-381">
+          <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
           <folding>
             <element signature="e#0#34#0" expanded="true" />
-            <marker date="1541627089103" expanded="true" signature="1213:1278" ph="..." />
+            <marker date="1541685281809" expanded="true" signature="1213:1278" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Network/NeuralLayer.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="367">
+          <caret line="39" column="25" selection-start-line="39" selection-start-column="25" selection-end-line="39" selection-end-column="25" />
+          <folding>
+            <marker date="1541731026898" expanded="true" signature="919:928" ph="..." />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Iris/iristraining.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="961">
-          <caret line="104" selection-start-line="104" selection-end-line="104" />
+        <state relative-caret-position="187">
+          <caret line="32" column="43" selection-start-line="32" selection-start-column="43" selection-end-line="32" selection-end-column="43" />
           <folding>
-            <element signature="e#0#37#0" expanded="true" />
-            <marker date="1541635854331" expanded="true" signature="218:223" ph="..." />
+            <element signature="e#0#11#0" expanded="true" />
+            <marker date="1541731250372" expanded="true" signature="231:236" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Network/NeuralNetwork.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-268">
+          <caret line="17" column="41" lean-forward="true" selection-start-line="17" selection-start-column="41" selection-end-line="17" selection-end-column="41" />
+          <folding>
+            <marker date="1541709394761" expanded="true" signature="1184:1295" ph="..." />
           </folding>
         </state>
       </provider>

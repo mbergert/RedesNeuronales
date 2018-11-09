@@ -13,7 +13,7 @@ class Neuron:
             for i in range(0, num):
                 self.weights.append(uniform(-2, 2))
             self.bias = random()
-        self.delta = 1
+        self.delta = 0
         self.output = 0
         self.lastinputs = []
         self.error = 0

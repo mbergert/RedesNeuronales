@@ -36,13 +36,14 @@ class NeuralLayer:
         error = 0
         for i in range(len(self.neurons)):
             for j in range(len(nextlayer.getNeurons())):
-                error += nextlayer.getNeurons()[j].getWeighti(i) * nextlayer.getNeurons()[j].getDelta()
+                error += nextlayer.getNeurons()[j].getWeighti(i) \
+                         * nextlayer.getNeurons()[j].getDelta()
             self.neurons[i].updateDelta(error)
             error = 0
-
-    def getNeurons(self):
-        return self.neurons
 
     def update(self, lr):
         for neuron in self.neurons:
             neuron.update(lr)
+
+    def getNeurons(self):
+        return self.neurons
