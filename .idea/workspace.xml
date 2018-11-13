@@ -2,12 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="75b0f850-2bf3-47b4-8fb7-a9de958b08bb" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/GeneticAlgorithm/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GeneticAlgorithm/minitarea1.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/RedesNeuronales.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/RedesNeuronales.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Iris/iristraining.py" beforeDir="false" afterPath="$PROJECT_DIR$/Iris/iristraining.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Network/NeuralLayer.py" beforeDir="false" afterPath="$PROJECT_DIR$/Network/NeuralLayer.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Network/NeuralNetwork.py" beforeDir="false" afterPath="$PROJECT_DIR$/Network/NeuralNetwork.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Network/Neuron.py" beforeDir="false" afterPath="$PROJECT_DIR$/Network/Neuron.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Test/testred.py" beforeDir="false" afterPath="$PROJECT_DIR$/Test/testred.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -46,8 +44,9 @@
     <session id="-1370572247">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="10" />
+          <entry key="project.closed" value="12" />
           <entry key="project.open.time.0" value="2" />
+          <entry key="project.open.time.1" value="1" />
           <entry key="project.open.time.2" value="1" />
           <entry key="project.open.time.28" value="1" />
           <entry key="project.open.time.3" value="1" />
@@ -55,89 +54,55 @@
           <entry key="project.open.time.39" value="1" />
           <entry key="project.open.time.40" value="1" />
           <entry key="project.open.time.41" value="1" />
+          <entry key="project.open.time.42" value="1" />
           <entry key="project.open.time.5" value="1" />
           <entry key="project.open.time.6" value="1" />
           <entry key="project.open.time.9" value="1" />
-          <entry key="project.opened" value="12" />
+          <entry key="project.opened" value="14" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="csv" value="3" />
-          <entry key="py" value="35" />
+          <entry key="py" value="36" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="CSV" value="2" />
           <entry key="PLAIN_TEXT" value="1" />
-          <entry key="Python" value="35" />
+          <entry key="Python" value="36" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="Python Console" value="60" />
           <entry key="csv" value="12" />
-          <entry key="dummy" value="4" />
-          <entry key="py" value="6268" />
-          <entry key="txt" value="154" />
+          <entry key="dummy" value="5" />
+          <entry key="py" value="7389" />
+          <entry key="txt" value="167" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="PLAIN_TEXT" value="170" />
-          <entry key="Python" value="6328" />
+          <entry key="PLAIN_TEXT" value="184" />
+          <entry key="Python" value="7449" />
         </counts>
       </usages-collector>
     </session>
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Network/Neuron.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-381">
-              <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
-              <folding>
-                <element signature="e#0#34#0" expanded="true" />
-                <marker date="1541685281809" expanded="true" signature="1213:1278" ph="..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Iris/iristraining.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="187">
-              <caret line="32" column="43" selection-start-line="32" selection-start-column="43" selection-end-line="32" selection-end-column="43" />
-              <folding>
-                <element signature="e#0#11#0" expanded="true" />
-                <marker date="1541731250372" expanded="true" signature="231:236" ph="..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/Network/NeuralNetwork.py">
+        <entry file="file://$PROJECT_DIR$/GeneticAlgorithm/minitarea1.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-268">
-              <caret line="17" column="41" lean-forward="true" selection-start-line="17" selection-start-column="41" selection-end-line="17" selection-end-column="41" />
+            <state relative-caret-position="476">
+              <caret line="56" column="4" selection-start-line="56" selection-start-column="4" selection-end-line="56" selection-end-column="4" />
               <folding>
-                <marker date="1541709394761" expanded="true" signature="1184:1295" ph="..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Network/NeuralLayer.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="367">
-              <caret line="39" column="25" selection-start-line="39" selection-start-column="25" selection-end-line="39" selection-end-column="25" />
-              <folding>
-                <marker date="1541731026898" expanded="true" signature="919:928" ph="..." />
+                <marker date="1542122696628" expanded="true" signature="249:277" ph="..." />
+                <marker date="1542122696628" expanded="true" signature="300:305" ph="..." />
+                <marker date="1542122696628" expanded="true" signature="602:638" ph="..." />
+                <marker date="1542122696628" expanded="true" signature="913:922" ph="..." />
               </folding>
             </state>
           </provider>
@@ -148,8 +113,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Python Script" />
         <option value="Python Unit Test" />
+        <option value="Python Script" />
       </list>
     </option>
   </component>
@@ -178,6 +143,7 @@
         <option value="$PROJECT_DIR$/Network/NeuralNetwork.py" />
         <option value="$PROJECT_DIR$/Network/NeuralLayer.py" />
         <option value="$PROJECT_DIR$/Iris/iristraining.py" />
+        <option value="$PROJECT_DIR$/GeneticAlgorithm/minitarea1.py" />
       </list>
     </option>
   </component>
@@ -190,7 +156,7 @@
   <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="67" />
     <option name="y" value="25" />
-    <option name="width" value="1299" />
+    <option name="width" value="650" />
     <option name="height" value="743" />
   </component>
   <component name="ProjectView">
@@ -198,7 +164,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -209,12 +174,23 @@
             <path>
               <item name="RedesNeuronales" type="b2602c69:ProjectViewProjectNode" />
               <item name="RedesNeuronales" type="462c0819:PsiDirectoryNode" />
+              <item name="GeneticAlgorithm" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="RedesNeuronales" type="b2602c69:ProjectViewProjectNode" />
+              <item name="RedesNeuronales" type="462c0819:PsiDirectoryNode" />
+              <item name="Iris" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="RedesNeuronales" type="b2602c69:ProjectViewProjectNode" />
+              <item name="RedesNeuronales" type="462c0819:PsiDirectoryNode" />
               <item name="Test" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -425,7 +401,14 @@
       <option name="project" value="LOCAL" />
       <updated>1541636058367</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="&quot;Final Commit&quot;">
+      <created>1541735223599</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1541735223599</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -471,13 +454,14 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="67" y="25" width="1299" height="743" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" weight="0.15562649" />
+      <window_info content_ui="combo" id="Project" order="0" weight="0.16041501" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32789558" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.34369886" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.34369886" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.3970588" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -491,7 +475,7 @@
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info active="true" anchor="right" id="SciView" order="3" visible="true" weight="0.2529928" />
+      <window_info anchor="right" id="SciView" order="3" weight="0.1452514" />
       <window_info anchor="right" id="Database" order="4" weight="0.4924182" />
     </layout>
     <layout-to-restore>
@@ -529,7 +513,8 @@
     <MESSAGE value="&quot;La red no esta tirando decimales y me da pena&quot;" />
     <MESSAGE value="&quot;Learning curve, falta errores" />
     <MESSAGE value="&quot;mission completed&quot;" />
-    <option name="LAST_COMMIT_MESSAGE" value="&quot;mission completed&quot;" />
+    <MESSAGE value="&quot;Final Commit&quot;" />
+    <option name="LAST_COMMIT_MESSAGE" value="&quot;Final Commit&quot;" />
   </component>
   <component name="XDebuggerManager">
     <watches-manager>
@@ -625,16 +610,12 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="136">
           <caret line="14" column="41" selection-start-line="14" selection-start-column="40" selection-end-line="14" selection-end-column="41" />
-          <folding>
-            <element signature="e#0#15#0" expanded="true" />
-            <marker date="1541692615690" expanded="true" signature="137:1331" ph="..." />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Network/Neuron.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-381">
+        <state relative-caret-position="187">
           <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
           <folding>
             <element signature="e#0#34#0" expanded="true" />
@@ -645,7 +626,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Network/NeuralLayer.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="367">
+        <state relative-caret-position="663">
           <caret line="39" column="25" selection-start-line="39" selection-start-column="25" selection-end-line="39" selection-end-column="25" />
           <folding>
             <marker date="1541731026898" expanded="true" signature="919:928" ph="..." />
@@ -655,7 +636,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Iris/iristraining.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
+        <state relative-caret-position="408">
           <caret line="32" column="43" selection-start-line="32" selection-start-column="43" selection-end-line="32" selection-end-column="43" />
           <folding>
             <element signature="e#0#11#0" expanded="true" />
@@ -666,10 +647,23 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Network/NeuralNetwork.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-268">
-          <caret line="17" column="41" lean-forward="true" selection-start-line="17" selection-start-column="41" selection-end-line="17" selection-end-column="41" />
+        <state relative-caret-position="51">
+          <caret line="19" selection-start-line="17" selection-start-column="41" selection-end-line="19" />
           <folding>
             <marker date="1541709394761" expanded="true" signature="1184:1295" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/GeneticAlgorithm/minitarea1.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="476">
+          <caret line="56" column="4" selection-start-line="56" selection-start-column="4" selection-end-line="56" selection-end-column="4" />
+          <folding>
+            <marker date="1542122696628" expanded="true" signature="249:277" ph="..." />
+            <marker date="1542122696628" expanded="true" signature="300:305" ph="..." />
+            <marker date="1542122696628" expanded="true" signature="602:638" ph="..." />
+            <marker date="1542122696628" expanded="true" signature="913:922" ph="..." />
           </folding>
         </state>
       </provider>
