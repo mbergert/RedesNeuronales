@@ -15,22 +15,28 @@ def comp(elem1, elem2):
 def genqueen(n):
     return randint(0, n - 1)
 
-
 def queenfitness(elem):
     ngenes = len(elem)
     # Verificar choces en las columnas
     duplicated_exc = set(elem)
     fitness = len(duplicated_exc)
+    col_up=False
+    col_down= False
     # Verificar choques en las diagonales
-    for i in range(ngenes - 1):
+    for i in range(ngenes-1):
         gene = elem[i]
-        for j in range(1, ngenes - i):
-            next = elem[i + j]
+        for j in range(1, ngenes-i):
+            next = elem[i+j]
             if next == gene + j:
-                fitness -= 1
+                col_up=True
             elif next == gene - j:
-                fitness -= 1
+                col_down=True
+        if col_up== True:
+            fitness -=1
+        if col_down==True:
+            fitness-=1
     return fitness
+
 
 
 class GeneticAlgorithm:

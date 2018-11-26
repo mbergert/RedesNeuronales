@@ -39,15 +39,21 @@ def queenfitness(elem):
     # Verificar choces en las columnas
     duplicated_exc = set(elem)
     fitness = len(duplicated_exc)
+    col_up=False
+    col_down= False
     # Verificar choques en las diagonales
     for i in range(ngenes-1):
         gene = elem[i]
         for j in range(1, ngenes-i):
             next = elem[i+j]
             if next == gene + j:
-                fitness -= 1
+                col_up=True
             elif next == gene - j:
-                fitness -= 1
+                col_down=True
+        if col_up== True:
+            fitness -=1
+        if col_down==True:
+            fitness-=1
     return fitness
 
 
@@ -167,6 +173,6 @@ class GeneticAlgorithm:
         return guess
 
 
-GeneticAlgorithm(4, 100, queenfitness, genqueen, 0.01).run()
+#GeneticAlgorithm(4, 100, queenfitness, genqueen, 0.01).run()
 
-#print(queenfitness([3,1,0,2]))
+print(queenfitness([0,1,2,3]))
