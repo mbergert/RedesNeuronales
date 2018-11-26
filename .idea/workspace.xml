@@ -2,10 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="75b0f850-2bf3-47b4-8fb7-a9de958b08bb" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/GeneticAlgorithm/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/GeneticAlgorithm/minitarea1.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/RedesNeuronales.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/RedesNeuronales.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GeneticAlgorithm/NqueenGeneticAlgorithm.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GeneticAlgorithm/minitarea1.py" beforeDir="false" afterPath="$PROJECT_DIR$/GeneticAlgorithm/GeneticAlgorithm.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -16,15 +15,17 @@
   <component name="CoverageDataManager">
     <SUITE FILE_PATH="coverage/RedesNeuronales$NeuralLayer.coverage" NAME="NeuralLayer Coverage Results" MODIFIED="1540475840495" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Network" />
     <SUITE FILE_PATH="coverage/RedesNeuronales$XorNetwork.coverage" NAME="XorNetwork Coverage Results" MODIFIED="1541622403156" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Network" />
+    <SUITE FILE_PATH="coverage/RedesNeuronales$GeneticAlgorithim.coverage" NAME="GeneticAlgorithim Coverage Results" MODIFIED="1543260140256" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/GeneticAlgorithm" />
+    <SUITE FILE_PATH="coverage/RedesNeuronales$iristraining.coverage" NAME="iristraining Coverage Results" MODIFIED="1542223454253" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Iris" />
+    <SUITE FILE_PATH="coverage/RedesNeuronales$Graficos.coverage" NAME="Graficos Coverage Results" MODIFIED="1541451435413" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Perceptron" />
+    <SUITE FILE_PATH="coverage/RedesNeuronales$Unittests_for_testred_MyTestCase_testCase2.coverage" NAME="Unittests for testred.MyTestCase.testCase2 Coverage Results" MODIFIED="1541693322974" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Test" />
+    <SUITE FILE_PATH="coverage/RedesNeuronales$Unittests_for_testred_MyTestCase_testgoodSetUp.coverage" NAME="Unittests for testred.MyTestCase.testgoodSetUp Coverage Results" MODIFIED="1541692608760" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Test" />
+    <SUITE FILE_PATH="coverage/RedesNeuronales$NqueenGeneticAlgorithm.coverage" NAME="NqueenGeneticAlgorithm Coverage Results" MODIFIED="1543260501468" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/GeneticAlgorithm" />
+    <SUITE FILE_PATH="coverage/RedesNeuronales$NeuralNetwork.coverage" NAME="NeuralNetwork Coverage Results" MODIFIED="1540476632436" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Network" />
     <SUITE FILE_PATH="coverage/RedesNeuronales$Unittests_for_testred_MyTestCase_testCase1.coverage" NAME="Unittests for testred.MyTestCase.testCase1 Coverage Results" MODIFIED="1541692459678" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Test" />
     <SUITE FILE_PATH="coverage/RedesNeuronales$Neuron.coverage" NAME="Neuron Coverage Results" MODIFIED="1540478528056" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Network" />
     <SUITE FILE_PATH="coverage/RedesNeuronales$cloudpickle.coverage" NAME="cloudpickle Coverage Results" MODIFIED="1541532929087" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/../untitled/venv/lib/python3.6/site-packages/sklearn/externals/joblib/externals/cloudpickle" />
     <SUITE FILE_PATH="coverage/RedesNeuronales$Unittests_for_testred_MyTestCase.coverage" NAME="Unittests for testred.MyTestCase Coverage Results" MODIFIED="1541692464539" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Test" />
-    <SUITE FILE_PATH="coverage/RedesNeuronales$iristraining.coverage" NAME="iristraining Coverage Results" MODIFIED="1541735155691" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Iris" />
-    <SUITE FILE_PATH="coverage/RedesNeuronales$Graficos.coverage" NAME="Graficos Coverage Results" MODIFIED="1541451435413" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Perceptron" />
-    <SUITE FILE_PATH="coverage/RedesNeuronales$Unittests_for_testred_MyTestCase_testCase2.coverage" NAME="Unittests for testred.MyTestCase.testCase2 Coverage Results" MODIFIED="1541693322974" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Test" />
-    <SUITE FILE_PATH="coverage/RedesNeuronales$Unittests_for_testred_MyTestCase_testgoodSetUp.coverage" NAME="Unittests for testred.MyTestCase.testgoodSetUp Coverage Results" MODIFIED="1541692608760" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Test" />
-    <SUITE FILE_PATH="coverage/RedesNeuronales$NeuralNetwork.coverage" NAME="NeuralNetwork Coverage Results" MODIFIED="1540476632436" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Network" />
   </component>
   <component name="DatabaseView">
     <option name="SHOW_INTERMEDIATE" value="true" />
@@ -44,10 +45,10 @@
     <session id="-1370572247">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="12" />
+          <entry key="project.closed" value="16" />
           <entry key="project.open.time.0" value="2" />
-          <entry key="project.open.time.1" value="1" />
-          <entry key="project.open.time.2" value="1" />
+          <entry key="project.open.time.1" value="4" />
+          <entry key="project.open.time.2" value="2" />
           <entry key="project.open.time.28" value="1" />
           <entry key="project.open.time.3" value="1" />
           <entry key="project.open.time.35" value="1" />
@@ -58,51 +59,67 @@
           <entry key="project.open.time.5" value="1" />
           <entry key="project.open.time.6" value="1" />
           <entry key="project.open.time.9" value="1" />
-          <entry key="project.opened" value="14" />
+          <entry key="project.opened" value="18" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="csv" value="3" />
-          <entry key="py" value="36" />
+          <entry key="py" value="39" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="CSV" value="2" />
           <entry key="PLAIN_TEXT" value="1" />
-          <entry key="Python" value="36" />
+          <entry key="Python" value="39" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="Python Console" value="60" />
+          <entry key="Python Console" value="157" />
           <entry key="csv" value="12" />
-          <entry key="dummy" value="5" />
-          <entry key="py" value="7389" />
-          <entry key="txt" value="167" />
+          <entry key="dummy" value="22" />
+          <entry key="py" value="11587" />
+          <entry key="txt" value="249" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="PLAIN_TEXT" value="184" />
-          <entry key="Python" value="7449" />
+          <entry key="PLAIN_TEXT" value="283" />
+          <entry key="Python" value="11744" />
         </counts>
       </usages-collector>
     </session>
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/GeneticAlgorithm/minitarea1.py">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/GeneticAlgorithm/GeneticAlgorithm.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="476">
-              <caret line="56" column="4" selection-start-line="56" selection-start-column="4" selection-end-line="56" selection-end-column="4" />
+            <state relative-caret-position="102">
+              <caret line="6" lean-forward="true" selection-start-line="6" selection-end-line="12" selection-end-column="15" />
               <folding>
-                <marker date="1542122696628" expanded="true" signature="249:277" ph="..." />
-                <marker date="1542122696628" expanded="true" signature="300:305" ph="..." />
-                <marker date="1542122696628" expanded="true" signature="602:638" ph="..." />
-                <marker date="1542122696628" expanded="true" signature="913:922" ph="..." />
+                <element signature="e#0#22#0" expanded="true" />
+                <marker date="1543260140182" expanded="true" signature="282:285" ph="..." />
+                <marker date="1543260140182" expanded="true" signature="476:477" ph="..." />
+                <marker date="1543260140182" expanded="true" signature="487:1079" ph="..." />
+                <marker date="1543260140182" expanded="true" signature="665:1079" ph="..." />
+                <marker date="1543260140182" expanded="true" signature="1102:1107" ph="..." />
+                <marker date="1543260140182" expanded="true" signature="1386:1392" ph="..." />
+                <marker date="1543260140182" expanded="true" signature="1699:1708" ph="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/GeneticAlgorithm/NqueenGeneticAlgorithm.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="66">
+              <caret line="122" column="16" lean-forward="true" selection-start-line="122" selection-start-column="16" selection-end-line="122" selection-end-column="16" />
+              <folding>
+                <element signature="e#0#22#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -144,6 +161,8 @@
         <option value="$PROJECT_DIR$/Network/NeuralLayer.py" />
         <option value="$PROJECT_DIR$/Iris/iristraining.py" />
         <option value="$PROJECT_DIR$/GeneticAlgorithm/minitarea1.py" />
+        <option value="$PROJECT_DIR$/GeneticAlgorithm/GeneticAlgorithm.py" />
+        <option value="$PROJECT_DIR$/GeneticAlgorithm/NqueenGeneticAlgorithm.py" />
       </list>
     </option>
   </component>
@@ -164,6 +183,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -190,10 +210,10 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
+    <property name="SearchEverywhereHistoryKey" value="&#9;FILE&#9;file:///home/mtrujilloberger/PycharmProjects/RedesNeuronales/Network/NeuralNetwork.py" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
@@ -216,7 +236,51 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.iristraining">
+  <component name="RunManager" selected="Python.NqueenGeneticAlgorithm">
+    <configuration name="GeneticAlgorithim" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="RedesNeuronales" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/GeneticAlgorithm" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/GeneticAlgorithm/GeneticAlgorithm.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="NqueenGeneticAlgorithm" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="RedesNeuronales" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/GeneticAlgorithm" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/GeneticAlgorithm/NqueenGeneticAlgorithm.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <configuration name="Unnamed" type="PythonConfigurationType" factoryName="Python">
       <module name="RedesNeuronales" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -231,28 +295,6 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
       <option name="SCRIPT_NAME" value="" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="XorNetwork" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="RedesNeuronales" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Network" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Network/XorNetwork.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -298,21 +340,6 @@
       <option name="_new_targetType" value="&quot;PYTHON&quot;" />
       <method v="2" />
     </configuration>
-    <configuration name="Unittests for testred.MyTestCase.testCase1" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
-      <module name="RedesNeuronales" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Test" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;testred.MyTestCase.testCase1&quot;" />
-      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
-      <method v="2" />
-    </configuration>
     <configuration name="Unittests for testred.MyTestCase.testCase2" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
       <module name="RedesNeuronales" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -346,19 +373,19 @@
     <list>
       <item itemvalue="Python.Unnamed" />
       <item itemvalue="Python.iristraining" />
-      <item itemvalue="Python.XorNetwork" />
       <item itemvalue="Python tests.Unittests for testred.MyTestCase" />
-      <item itemvalue="Python tests.Unittests for testred.MyTestCase.testCase1" />
       <item itemvalue="Python tests.Unittests for testred.MyTestCase.testCase2" />
       <item itemvalue="Python tests.Unittests for testred.MyTestCase.testgoodSetUp" />
+      <item itemvalue="Python.GeneticAlgorithim" />
+      <item itemvalue="Python.NqueenGeneticAlgorithm" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.NqueenGeneticAlgorithm" />
+        <item itemvalue="Python.GeneticAlgorithim" />
         <item itemvalue="Python tests.Unittests for testred.MyTestCase.testCase2" />
         <item itemvalue="Python tests.Unittests for testred.MyTestCase.testgoodSetUp" />
         <item itemvalue="Python tests.Unittests for testred.MyTestCase" />
-        <item itemvalue="Python tests.Unittests for testred.MyTestCase.testCase1" />
-        <item itemvalue="Python.XorNetwork" />
       </list>
     </recent_temporary>
   </component>
@@ -408,7 +435,21 @@
       <option name="project" value="LOCAL" />
       <updated>1541735223599</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="&quot;Algoritmos geneticos, pasos 1, 2 y 3&quot;">
+      <created>1542123224980</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1542123224980</updated>
+    </task>
+    <task id="LOCAL-00007" summary="&quot;pasos completos, no probados&quot;">
+      <created>1542135800141</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1542135800141</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -456,12 +497,12 @@
     <frame x="67" y="25" width="1299" height="743" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" weight="0.16041501" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.16759777" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32789558" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.34369886" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.3425775" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.3970588" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -470,7 +511,7 @@
       <window_info anchor="bottom" id="Version Control" order="8" weight="0.32952693" />
       <window_info anchor="bottom" id="Database Changes" order="9" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
-      <window_info anchor="bottom" id="Python Console" order="11" weight="0.32952693" />
+      <window_info anchor="bottom" id="Python Console" order="11" weight="0.3284553" />
       <window_info anchor="bottom" id="Terminal" order="12" weight="0.38536584" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -514,7 +555,9 @@
     <MESSAGE value="&quot;Learning curve, falta errores" />
     <MESSAGE value="&quot;mission completed&quot;" />
     <MESSAGE value="&quot;Final Commit&quot;" />
-    <option name="LAST_COMMIT_MESSAGE" value="&quot;Final Commit&quot;" />
+    <MESSAGE value="&quot;Algoritmos geneticos, pasos 1, 2 y 3&quot;" />
+    <MESSAGE value="&quot;pasos completos, no probados&quot;" />
+    <option name="LAST_COMMIT_MESSAGE" value="&quot;pasos completos, no probados&quot;" />
   </component>
   <component name="XDebuggerManager">
     <watches-manager>
@@ -617,10 +660,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="187">
           <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
-          <folding>
-            <element signature="e#0#34#0" expanded="true" />
-            <marker date="1541685281809" expanded="true" signature="1213:1278" ph="..." />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -628,9 +667,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="663">
           <caret line="39" column="25" selection-start-line="39" selection-start-column="25" selection-end-line="39" selection-end-column="25" />
-          <folding>
-            <marker date="1541731026898" expanded="true" signature="919:928" ph="..." />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -638,10 +674,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="408">
           <caret line="32" column="43" selection-start-line="32" selection-start-column="43" selection-end-line="32" selection-end-column="43" />
-          <folding>
-            <element signature="e#0#11#0" expanded="true" />
-            <marker date="1541731250372" expanded="true" signature="231:236" ph="..." />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -649,21 +681,39 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="51">
           <caret line="19" selection-start-line="17" selection-start-column="41" selection-end-line="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_HOME_DIR$/helpers/pydev/_pydev_bundle/pydev_import_hook.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="128">
+          <caret line="19" selection-start-line="19" selection-end-line="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/GeneticAlgorithm/GeneticAlgorithm.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" lean-forward="true" selection-start-line="6" selection-end-line="12" selection-end-column="15" />
           <folding>
-            <marker date="1541709394761" expanded="true" signature="1184:1295" ph="..." />
+            <element signature="e#0#22#0" expanded="true" />
+            <marker date="1543260140182" expanded="true" signature="282:285" ph="..." />
+            <marker date="1543260140182" expanded="true" signature="476:477" ph="..." />
+            <marker date="1543260140182" expanded="true" signature="487:1079" ph="..." />
+            <marker date="1543260140182" expanded="true" signature="665:1079" ph="..." />
+            <marker date="1543260140182" expanded="true" signature="1102:1107" ph="..." />
+            <marker date="1543260140182" expanded="true" signature="1386:1392" ph="..." />
+            <marker date="1543260140182" expanded="true" signature="1699:1708" ph="..." />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/GeneticAlgorithm/minitarea1.py">
+    <entry file="file://$PROJECT_DIR$/GeneticAlgorithm/NqueenGeneticAlgorithm.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="476">
-          <caret line="56" column="4" selection-start-line="56" selection-start-column="4" selection-end-line="56" selection-end-column="4" />
+        <state relative-caret-position="66">
+          <caret line="122" column="16" lean-forward="true" selection-start-line="122" selection-start-column="16" selection-end-line="122" selection-end-column="16" />
           <folding>
-            <marker date="1542122696628" expanded="true" signature="249:277" ph="..." />
-            <marker date="1542122696628" expanded="true" signature="300:305" ph="..." />
-            <marker date="1542122696628" expanded="true" signature="602:638" ph="..." />
-            <marker date="1542122696628" expanded="true" signature="913:922" ph="..." />
+            <element signature="e#0#22#0" expanded="true" />
           </folding>
         </state>
       </provider>
