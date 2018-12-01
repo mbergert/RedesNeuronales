@@ -1,8 +1,7 @@
 from math import floor
 from random import randint, random, choice
 import string
-
-from sklearn.utils import shuffle
+import matplotlib.pyplot as plt
 
 
 def comp(elem1, elem2):
@@ -13,7 +12,9 @@ def comp(elem1, elem2):
     return True
 
 
-def fitness(elem, word):
+def fitnesscat(elem):
+    # word = ['s', 'u', 'p', 'e', 'r', 'p','a','l','a','b','r','a']
+    word = ['c', 'a', 't']
     fitting = 0
     assert len(elem) == len(word)
     for i in range(len(word)):
@@ -22,16 +23,61 @@ def fitness(elem, word):
     return fitting
 
 
-def gen():
+def fitness12(elem):
+    # word = ['s', 'u', 'p', 'e', 'r', 'p','a','l','a','b','r','a']
+    word = ['c', 'a', 't']
+    fitting = 0
+    assert len(elem) == len(word)
+    for i in range(len(word)):
+        if elem[i] == word[i]:
+            fitting = fitting + 1
+    return fitting
+
+
+def fitness(elem):
+    # word = ['s', 'u', 'p', 'e', 'r', 'p','a','l','a','b','r','a','c','o','o','l']
+    word = ['c', 'a', 't']
+    fitting = 0
+    assert len(elem) == len(word)
+    for i in range(len(word)):
+        if elem[i] == word[i]:
+            fitting = fitting + 1
+    return fitting
+
+
+def fitness(elem):
+    # word = ['s', 'u', 'p', 'e', 'r', 'p','a','l','a','b','r','a']
+    word = ['c', 'a', 't']
+    fitting = 0
+    assert len(elem) == len(word)
+    for i in range(len(word)):
+        if elem[i] == word[i]:
+            fitting = fitting + 1
+    return fitting
+
+
+def fitnessNum(elem):
+    # word = ['s', 'u', 'p', 'e', 'r', 'p','a','l','a','b','r','a']
+    word = [1, 0, 1, 0, 0, 1, 1, 0, 0, 0]
+    #word = [1, 0, 1, 0]
+    fitting = 0
+    assert len(elem) == len(word)
+    for i in range(len(word)):
+        if elem[i] == word[i]:
+            fitting = fitting + 1
+    return fitting
+
+
+def gen(elem):
     return randint(0, 1)
 
 
-def genstr():
+def genstr(elem):
     return choice(string.ascii_lowercase)
 
 
 def genqueen(n):
-    return randint(0, n-1)
+    return randint(0, n - 1)
 
 
 def queenfitness(elem):
@@ -39,27 +85,26 @@ def queenfitness(elem):
     # Verificar choces en las columnas
     duplicated_exc = set(elem)
     fitness = len(duplicated_exc)
-    col_up=False
-    col_down= False
+    col_up = False
+    col_down = False
     # Verificar choques en las diagonales
-    for i in range(ngenes-1):
+    for i in range(ngenes - 1):
         gene = elem[i]
-        for j in range(1, ngenes-i):
-            next = elem[i+j]
+        for j in range(1, ngenes - i):
+            next = elem[i + j]
             if next == gene + j:
-                col_up=True
+                col_up = True
             elif next == gene - j:
-                col_down=True
-        if col_up== True:
-            fitness -=1
-        if col_down==True:
-            fitness-=1
+                col_down = True
+        if col_up == True:
+            fitness -= 1
+        if col_down == True:
+            fitness -= 1
     return fitness
 
 
-
 class GeneticAlgorithm:
-    def __init__(self, ngens, npopulation, fitness, gen, mutationRate):
+    def __init__(self, ngens, npopulation, fitness, gen, mutationRate, tolerancy=10):
         self.ngens = ngens
         self.npopulation = npopulation
         self.population = []
@@ -67,6 +112,15 @@ class GeneticAlgorithm:
         self.fitness = fitness
         self.gen = gen
         self.mutationRate = mutationRate
+        self.tolerancy = tolerancy
+        self.bestfit = []
+        self.generation = []
+
+    def getGenerations(self):
+        return self.generation
+
+    def getFitness(self):
+        return self.bestfit
 
     # Step 1
     def initPopulation(self):
@@ -84,8 +138,7 @@ class GeneticAlgorithm:
             self.fit.append(self.fitness(elem))
 
     # Step 3: Tournament Selection
-    def tournament_selection(self, pop, k):
-
+    def tournament_selection(self, k):
         best = None
         if k == 0:
             best = 0
@@ -104,7 +157,14 @@ class GeneticAlgorithm:
         k = floor(3 * len(self.population) / 4)
         # elejir a los padres
         for i in range(0, 2 * nparents):
-            best = self.tournament_selection(shuffle(self.population), k)
+            # Shuffle artesanal
+            for index in range(len(self.population)):
+                a = randint(0, len(self.population) - 1)
+                b = randint(0, len(self.population) - 1)
+                self.population[a], self.population[b] = self.population[b], self.population[a]
+                self.fit[a], self.fit[b] = self.fit[b], self.fit[a]
+
+            best = self.tournament_selection(k)
             parents.append(self.population[best])
 
         # Crear a los hijos
@@ -133,28 +193,34 @@ class GeneticAlgorithm:
         for i in range(len(self.fit)):
             if self.fit[i] > self.fit[best]:
                 best = i
-        return i
+        return best
 
     def run(self):
         # paso1
         self.initPopulation()
         self.checkfitness()
-        index=self.getBestIndex()
+        index = self.getBestIndex()
         guess = self.population[index]
-        guessFitness= self.fit[index]
+        guessFitness = self.fit[index]
+
         last = []
         last.append(guess)
-        end = 0
-        iter = 0
-        while self.ngens> guessFitness :
-            if end:
+        self.end = 0
+        iter = 1
+
+
+        while self.ngens > guessFitness:
+
+            if self.end:
                 break
-            print("iteration", format(iter), ";current best:", format(guess))
+            self.generation.append(iter)
+            print("Generation", format(iter), ";Current best:", format(guess))
             self.reproduction()
             self.checkfitness()
             guess = self.population[self.getBestIndex()]
-            guessFitness=self.fit[self.getBestIndex()]
-            if len(last) < 10:
+            guessFitness = self.fit[self.getBestIndex()]
+            self.bestfit.append(guessFitness)
+            if len(last) < self.tolerancy:
                 last.append(guess)
             else:
                 last.pop(0)
@@ -162,17 +228,35 @@ class GeneticAlgorithm:
                 if comp(last[0], guess):
                     for elem in last[1:]:
                         if not comp(elem, guess):
-                            end = 0
+                            self.end = 0
                             break
                         else:
-                            end = 1
+                            self.end = 1
                             continue
 
             iter = iter + 1
+
         print("best: ", guess)
+
         return guess
 
 
-#GeneticAlgorithm(4, 100, queenfitness, genqueen, 0.01).run()
+class Metrics:
+    def fitnesscurve(self, ngene, npob, fitnessfunc, genfunc, mr, tol):
+        ga = GeneticAlgorithm(ngene, npob, fitnessfunc, genfunc, mr, tol)
+        ga.run()
+        print("generaciones:", ga.getGenerations())
+        print("fitness", ga.getFitness())
+        plt.plot(ga.getGenerations(), ga.getFitness())
+        plt.ylabel("Fitness")
+        plt.xlabel("Generación")
+        plt.title("Curva de fitness")
+        plt.show()
 
-print(queenfitness([0,1,2,3]))
+    def averagegenscurve(self, ngene, npob, fitnessfunc, genfunc, mr, tol):
+        random.setseed(25)
+
+    # GeneticAlgorithm(100, 100, queenfitness, genqueen, 0.01, 1).run()
+
+
+Metrics().fitnesscurve(3, 100, fitness, genstr, 0.01, 10)
