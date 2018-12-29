@@ -4,21 +4,22 @@ from copy import deepcopy
 #Clase creada para tener objetos Tree con los que trabajará el algoritmo genético
 class Tree(object):
     #Init crea un arbol al azar dandole valores aleatoriamente respetando una profundidad máxima
-    def __init__(self, maxdepth):
+    def __init__(self, maxdepth, ops, terms):
         self.left = None
         self.right = None
         self.data = None
-        self.ops= ['*', '+', '/','-']
+        self.ops= ops
+        self.terms= terms
         # Creacion, si es 1 uno añade un nuevo tree, sino, termina.
 
         gen = randint(1, 2)
 
         if gen==1 and maxdepth>0:
             self.data= self.ops[randint(0,len(self.ops)-1)]
-            self.right=Tree(maxdepth-1)
-            self.left=Tree(maxdepth-1)
+            self.right=Tree(maxdepth-1, self.ops, self.terms)
+            self.left=Tree(maxdepth-1, self.ops, self.terms)
         else:
-            self.data = format( randint(0, 100))
+            self.data = self.terms[randint(0, len(self.terms)-1)]
 #Imprime un arbol en forma de operación
     def __str__(self):
         if self.right is None:
@@ -36,7 +37,10 @@ class Tree(object):
         return deepcopy(self)
 
 
-a= Tree(4)
+ops=['*', '+','-']
+terms= ["14", "18", "1", "4"]
+
+a= Tree(20, ops, terms)
 print(a)
 print(a.evalTree())
 b=a.copyTree()
