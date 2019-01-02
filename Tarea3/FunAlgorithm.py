@@ -117,9 +117,9 @@ class GeneticAlgorithm:
                 parent = m.parent
                 if parent is not None:
                     if parent.left == m:
-                        parent.left = Tree(randint(1, 10), parent.ops, parent.terms)
+                        parent.left = FunTree(randint(1, 10), parent.ops, parent.terms)
                     else:
-                        parent.right = Tree(randint(1, 10), parent.ops, parent.terms)
+                        parent.right = FunTree(randint(1, 10), parent.ops, parent.terms)
             babies.append(baby)
         self.population = babies
 
