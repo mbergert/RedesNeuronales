@@ -1,4 +1,7 @@
+
 from math import floor
+from random import randint, random, choice
+import matplotlib.pyplot as plt
 
 
 from Tree import *
@@ -20,7 +23,9 @@ def gen(specs):
 # La la funcion fitness calulara la diferencia entre el resultado esperado y el obtenido
 
 def fitness(tree):
-    expected_result = 147
+    #expected_result = 147
+    #expected_result = 10000
+    expected_result=1
     ev = tree.evalTree()
     return abs(expected_result - ev)
 
@@ -37,6 +42,7 @@ class GeneticAlgorithm:
         self.tolerancy = tolerancy
         self.bestfit = []
         self.generation = []
+        self.allfit = []
 
     def getGenerations(self):
         return self.generation
@@ -94,9 +100,7 @@ class GeneticAlgorithm:
             # Para mixear los arboles, se serializaran ambos padres , se seleccionará un nodo para ambos y el primero
             # se convertirá en el padre del segundo
 
-            mixingParent1 = parent1.serialize()
             mixingParent2 = parent2.serialize()
-            mixingPoint1 = randint(0, len(mixingParent1) - 1)
             mixingPoint2 = randint(0, len(mixingParent2) - 1)
             baby1= parent1.copyTree()
             baby2 = mixingParent2[mixingPoint2].copyTree()
@@ -140,19 +144,26 @@ class GeneticAlgorithm:
         last.append(guess)
         self.end = 0
         iter = 1
+        self.generation.append(iter)
+        self.allfit.append(self.fit)
+        self.bestfit.append(guessFitness)
 
         while guessFitness > self.tolerancy:
 
             if self.end:
                 break
-            self.generation.append(iter)
             print("Generation", format(iter), ";Current best:", format(guess))
-            print(guess.evalTree())
+            print("evaluated tree ", guess.evalTree())
             self.reproduction()
             self.checkfitness()
             guess = self.population[self.getBestIndex()]
             guessFitness = self.fit[self.getBestIndex()]
-            self.bestfit.append(guessFitness)
+
+
+
+
+
+
             if len(last) < self.tolerancy:
                 last.append(guess)
             else:
@@ -168,13 +179,56 @@ class GeneticAlgorithm:
                             continue
 
             iter = iter + 1
+            self.generation.append(iter)
+            self.allfit.append(self.fit)
+            self.bestfit.append(guessFitness)
 
         print("best: ", guess)
+        if self.end == 1:
+            print("maximo local")
+
 
         return guess
 
 
 
+
+class Metrics:
+
+    def __init__(self, specs, npob, fitnessfunc, genfunc, mr, tol):
+
+        self.ga = GeneticAlgorithm(specs, npob, fitnessfunc, genfunc, mr, tol)
+        self.ga.run()
+
+    def fitnesscurve(self):
+        plt.plot(self.ga.getGenerations(), self.ga.getFitness())
+        plt.ylabel("Fitness")
+        plt.xlabel("Generación")
+        plt.title("Curva de fitness")
+        plt.show()
+
+    def averagefitnesscurve(self):
+        fits = self.ga.allfit
+
+        averagefits = []
+        for i in range(len(fits)):
+            av = 0
+            for j in range(len(fits[i])):
+                av += fits[i][j]
+            av =  av / len(fits[i])
+            averagefits.append(av)
+        plt.plot(self.ga.getGenerations(), averagefits, 'r-')
+        plt.ylabel("Average Fitness")
+        plt.xlabel("Generación")
+        plt.title("Average fitness curve")
+        plt.show()
+
+
 ops=['*', '+','-']
 terms= ["14", "18", "1", "4"]
-GeneticAlgorithm([3, ops, terms], 100, fitness, gen, 0.01, 0).run()
+m = Metrics([4, ops, terms], 100, fitness, gen, 0.01, 0)
+# m = Metrics(3, 100, fitness, genstr, 0.01, 100)
+m.fitnesscurve()
+m.averagefitnesscurve()
+
+
