@@ -1,13 +1,14 @@
 from math import floor
-from random import random
+
 
 from Tree import *
 
 
 def comp(elem1, elem2):
-    assert len(elem1) == len(elem2)
-    for i in range(len(elem1)):
-        if elem1[i] != elem2[i]:
+    if len(elem1.serialize()) != len(elem2.serialize()):
+        return False
+    for i in range(len(elem1.serialize())):
+        if elem1.serialize()[i] != elem2.serialize()[i]:
             return False
     return True
 
@@ -63,7 +64,7 @@ class GeneticAlgorithm:
             best = 0
         for i in range(0, k):
             ind = randint(0, k)
-            if (best == None) or (self.fit[ind] > self.fit[best]):
+            if (best == None) or (self.fit[ind] < self.fit[best]):
                 best = ind
         return best
 
@@ -75,7 +76,7 @@ class GeneticAlgorithm:
         babies = []
         k = floor(3 * len(self.population) / 4)
         # elejir a los padres
-        for i in range(0, 2 * nparents):
+        for i in range(0,  nparents):
             # Shuffle artesanal
             for index in range(len(self.population)):
                 a = randint(0, len(self.population) - 1)
@@ -86,31 +87,44 @@ class GeneticAlgorithm:
             best = self.tournament_selection(k)
             parents.append(self.population[best])
 
-        # Crear a los hijos
+        # Crear a los hijos, se modifica para que trabaje con arboles
         for i in range(0, len(self.population) * 2, 2):
             parent1 = parents[i]
             parent2 = parents[i + 1]
-            mixingPoint = randint(0, self.ngens)
-            baby = []
+            # Para mixear los arboles, se serializaran ambos padres , se seleccionará un nodo para ambos y el primero
+            # se convertirá en el padre del segundo
 
-            for j in range(0, self.ngens):
-                # Cross Over
-                if j < mixingPoint:
-                    baby.append(parent1[j])
-                else:
-                    baby.append(parent2[j])
-                # Mutation
-                for k in range(len(baby)):
-                    if random() < self.mutationRate:
-                        baby[k] = self.gen(self.ngens)
+            mixingParent1 = parent1.serialize()
+            mixingParent2 = parent2.serialize()
+            mixingPoint1 = randint(0, len(mixingParent1) - 1)
+            mixingPoint2 = randint(0, len(mixingParent2) - 1)
+            baby1= parent1.copyTree()
+            baby2 = mixingParent2[mixingPoint2].copyTree()
+            baby2.parent = baby1
+            if random() > 0.5:
+                baby1.left = baby2
+            else:
+                baby1.right = baby2
+            baby = baby1
+
+            # Mutation, reemplaza una parte al azar del arbol con otro
+            if random() < self.mutationRate:
+                a = baby.serialize()
+                m = a[randint(0, len(a) - 1)]
+                parent = m.parent
+                if parent is not None:
+                    if parent.left == m:
+                        parent.left = Tree(randint(1, 10), parent.ops, parent.terms)
+                    else:
+                        parent.right = Tree(randint(1, 10), parent.ops, parent.terms)
             babies.append(baby)
-            self.population = babies
+        self.population = babies
 
     def getBestIndex(self):
         best = 0
         assert len(self.population) == len(self.fit)
         for i in range(len(self.fit)):
-            if self.fit[i] > self.fit[best]:
+            if self.fit[i] < self.fit[best]:
                 best = i
         return best
 
@@ -127,12 +141,13 @@ class GeneticAlgorithm:
         self.end = 0
         iter = 1
 
-        while guessFitness > 0:
+        while guessFitness > self.tolerancy:
 
             if self.end:
                 break
             self.generation.append(iter)
             print("Generation", format(iter), ";Current best:", format(guess))
+            print(guess.evalTree())
             self.reproduction()
             self.checkfitness()
             guess = self.population[self.getBestIndex()]
@@ -157,3 +172,9 @@ class GeneticAlgorithm:
         print("best: ", guess)
 
         return guess
+
+
+
+ops=['*', '+','-']
+terms= ["14", "18", "1", "4"]
+GeneticAlgorithm([3, ops, terms], 100, fitness, gen, 0.01, 0).run()
