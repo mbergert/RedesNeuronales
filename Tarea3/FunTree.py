@@ -11,6 +11,7 @@ class FunTree(object):
         self.data = None
         self.parent = None
         self.ops = ops
+        self.nterms= nterms
         self.terms = []
         # crea los terminales para la creacion
         for i in range(0, nterms):
@@ -66,6 +67,3 @@ class FunTree(object):
 ops = ['*', '+', '-']
 terms = ["14", "18", "1", "4", "10", "15", "3", "5"]
 
-a = FunTree(4, ops, 10)
-print(a)
-print(a.evalTree(5))

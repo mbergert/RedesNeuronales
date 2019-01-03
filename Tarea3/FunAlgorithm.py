@@ -19,14 +19,22 @@ def gen(specs):
     return FunTree(specs[0], specs[1], specs[2])
 
 
+def expected_fun(x):
+    return (x*3 + 10)
+
 # La la funcion fitness calulara la diferencia entre el resultado esperado y el obtenido
 
-def fitness(tree, value):
-    #expected_result = 147
-    #expected_result = 10000
-    expected_result=1
-    ev = tree.evalTree(value)
-    return abs(expected_result - ev)
+def fitness(tree):
+    values= range(-10,10)
+    expected_result=[]
+    for i in range (len(values)):
+        expected_result.append(expected_fun(values[i]))
+    total_fitness=0
+    for i in range (len(expected_result)):
+        ev = tree.evalTree(values[i])
+        total_fitness += abs(expected_result[i] - ev)
+
+    return total_fitness
 
 
 class GeneticAlgorithm:
@@ -104,11 +112,15 @@ class GeneticAlgorithm:
             baby1= parent1.copyTree()
             baby2 = mixingParent2[mixingPoint2].copyTree()
             baby2.parent = baby1
-            if random() > 0.5:
-                baby1.left = baby2
+            if baby1.data in baby1.ops:
+                if random() > 0.5:
+                    baby1.left = baby2
+                else:
+                    baby1.right = baby2
+                baby=baby1
             else:
-                baby1.right = baby2
-            baby = baby1
+                baby= baby2
+
 
             # Mutation, reemplaza una parte al azar del arbol con otro
             if random() < self.mutationRate:
@@ -117,9 +129,9 @@ class GeneticAlgorithm:
                 parent = m.parent
                 if parent is not None:
                     if parent.left == m:
-                        parent.left = FunTree(randint(1, 10), parent.ops, parent.terms)
+                        parent.left = FunTree(randint(1, 10), parent.ops, parent.nterms)
                     else:
-                        parent.right = FunTree(randint(1, 10), parent.ops, parent.terms)
+                        parent.right = FunTree(randint(1, 10), parent.ops, parent.nterms)
             babies.append(baby)
         self.population = babies
 
@@ -152,7 +164,6 @@ class GeneticAlgorithm:
             if self.end:
                 break
             print("Generation", format(iter), ";Current best:", format(guess))
-            print("evaluated tree ", guess.evalTree())
             self.reproduction()
             self.checkfitness()
             guess = self.population[self.getBestIndex()]
@@ -197,7 +208,7 @@ class Metrics:
     def __init__(self, specs, npob, fitnessfunc, genfunc, mr, tol):
 
         self.ga = GeneticAlgorithm(specs, npob, fitnessfunc, genfunc, mr, tol)
-        self.ga.run()
+        self.guess=self.ga.run()
 
     def fitnesscurve(self):
         plt.plot(self.ga.getGenerations(), self.ga.getFitness())
@@ -222,13 +233,31 @@ class Metrics:
         plt.title("Average fitness curve")
         plt.show()
 
+    def evaluation_in_range(self):
+        ran= range(-10,10)
+        expected_result=[]
+        actual_result=[]
+        for i in ran:
+            expected_result.append(expected_fun(i))
+            actual_result.append(self.guess.evalTree(i))
+        plt.plot(ran, expected_result, 'b-')
+        plt.plot(ran, actual_result, 'r-')
+        plt.ylabel("Expected vs actual eval Value")
+        plt.xlabel("Value")
+        plt.title("Evaluation")
+        plt.legend()
+        plt.show()
+
+
+
 
 ops=['*', '+','-']
 terms= ["14", "18", "1", "4"]
-m = Metrics([4, ops, 10], 100, fitness, gen, 0.01, 0)
+m = Metrics([4, ops, 10], 100, fitness, gen, 0.01, 100)
 # m = Metrics(3, 100, fitness, genstr, 0.01, 100)
 m.fitnesscurve()
 m.averagefitnesscurve()
+m.evaluation_in_range()
 
 
 #Pendiente: Agregar a la evaluacion del fitness el rango de evaluacion, el resto debiese mantenerse.

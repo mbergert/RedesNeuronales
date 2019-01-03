@@ -25,7 +25,7 @@ def gen(specs):
 def fitness(tree):
     #expected_result = 147
     #expected_result = 10000
-    expected_result=1
+    expected_result=100
     ev = tree.evalTree()
     return abs(expected_result - ev)
 
