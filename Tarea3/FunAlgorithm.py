@@ -245,7 +245,6 @@ class Metrics:
         plt.ylabel("Expected vs actual eval Value")
         plt.xlabel("Value")
         plt.title("Evaluation")
-        plt.legend()
         plt.show()
 
 
@@ -253,7 +252,7 @@ class Metrics:
 
 ops=['*', '+','-']
 terms= ["14", "18", "1", "4"]
-m = Metrics([4, ops, 10], 100, fitness, gen, 0.01, 100)
+m = Metrics([4, ops, 10], 100, fitness, gen, 0.01, 40)
 # m = Metrics(3, 100, fitness, genstr, 0.01, 100)
 m.fitnesscurve()
 m.averagefitnesscurve()
